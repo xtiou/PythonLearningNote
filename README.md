@@ -55,10 +55,10 @@ The fractional_part function divides the numerator by the denominator, and retur
 Note: Since division by 0 produces an error, if the denominator is 0, the function should return 0 instead of attempting the division.
 ```python
 def fractional_part(numerator, denominator):
-	if denominator == 0:
-		return 0
-	else:
-		return (numerator/denominator) %1
+    if denominator == 0:
+        return 0
+    else:
+        return (numerator/denominator) %1
 
 print(fractional_part(5, 5)) # Should be 0
 print(fractional_part(5, 4)) # Should be 0.25
