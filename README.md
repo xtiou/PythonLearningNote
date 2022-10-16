@@ -31,6 +31,9 @@ Python can operate with numbers using the usual mathematical operators, and some
 - not a: True if a is False, False if a is True.
 
 
+
+
+
 ### week 3
 ### week 4
 ### week 5
