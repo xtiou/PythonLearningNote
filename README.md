@@ -156,6 +156,11 @@ multiplication_table(5)
 multiplication_table(8)	
 # Should print: 8x1=8 8x2=16 8x3=24
 ```
+#### for Loop
+For loops allow you to iterate over a sequence of values
+##### range() function
+
+#### recursion
 
 
 ### week 4
