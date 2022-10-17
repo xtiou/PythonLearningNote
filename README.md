@@ -203,7 +203,15 @@ retry(stop_service, 5)
 
 
 #### recursion
+A recursive function must include a recursive case and base case. The recursive case calls the function again, with a different value. The base case returns a value without calling the same function.
 
+A recursive function will usually have this structure:
+```python
+def recursive_function(parameters):
+    if base_case_condition(parameters):
+        return base_case_value
+    recursive_function(modified_parameters)
+```
 
 ### week 4
 ### week 5
