@@ -353,5 +353,8 @@ print(even_numbers(0))  # No numbers displayed
 
 
 ### week 4
+#### Strings
+#### Lists
+#### Dictionaries
 ### week 5
 ### week 6
