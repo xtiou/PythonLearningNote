@@ -406,6 +406,68 @@ In Python, there are a lot of things you can do with strings. In this cheat shee
 * **string.split(delimiter)** - Returns a list of substrings that were separated by whitespace or a delimiter
 * **string.replace(old, new)** - Returns a new string where all occurrences of old have been replaced by new.
 * **delimiter.join(list of strings)** - Returns a new string with all the strings joined by the delimiter 
+
+###### Formatting Strings Cheat Sheet
+####### format() method
+```python
+# "base string with {} placeholders".format(variables)
+
+example = "format() method"
+
+formatted_string = "this is an example of using the {} on a string".format(example)
+
+print(formatted_string)
+
+"""Outputs:
+this is an example of using the format() method on a string
+"""
+```
+If the placeholders indicate a number, they’re replaced by the variable corresponding to that order (starting at zero)
+```python
+# "{0} {1}".format(first, second)
+
+first = "apple"
+second = "banana"
+third = "carrot"
+
+formatted_string = "{0} {2} {1}".format(first, second, third)
+
+print(formatted_string)
+
+"""Outputs:
+apple carrot banana
+"""
+```
+If the placeholders indicate a field name, they’re replaced by the variable corresponding to that field name. This means that parameters to format need to be passed indicating the field name.
+```python
+# "{var1} {var2}".format(var1=value1, var2=value2)
+"{:exp1} {:exp2}".format(value1, value2)
+```
+If the placeholders include a colon, what comes after the colon is a formatting expression. See below for the expression reference.
+```python
+# {:d} integer value
+'{:d}'.format(10.5) → '10'
+```
+###### Formatting expressions
+![image](https://user-images.githubusercontent.com/18415884/197331516-33f9cf8c-2262-4dbc-a93a-0cf154c9b60e.png)
+
+###### Formatted string literals
+This feature was added in Python 3.6 and isn’t used a lot yet<br/>
+###### Examples:
+```python
+>>> name = "Micah"
+>>> print(f'Hello {name}')
+Hello Micah
+```
+```python
+>>> item = "Purple Cup"
+>>> amount = 5
+>>> price = amount * 3.25
+>>> print(f'Item: {item} - Amount: {amount} - Price: {price:.2f}')
+Item: Purple Cup - Amount: 5 - Price: 16.25
+```
+
+
 #### Lists
 #### Dictionaries
 ### week 5
