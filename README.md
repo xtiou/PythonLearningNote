@@ -353,5 +353,122 @@ print(even_numbers(0))  # No numbers displayed
 
 
 ### week 4
+#### Strings
+String Indexing and Slicing
+String indexing allows you to access individual characters in a string. You can do this by using square brackets and the location, or index, of the character you want to access. It's important to remember that Python starts indexes at 0. So to access the first character in a string, you would use the index [0]. If you try to access an index that’s larger than the length of your string, you’ll get an IndexError. This is because you’re trying to access something that doesn't exist! You can also access indexes from the end of the string going towards the start of the string by using negative values. The index [-1] would access the last character of the string, and the index [-2] would access the second-to-last character.
+
+You can also access a portion of a string, called a slice or a substring. This allows you to access multiple characters of a string. You can do this by creating a range, using a colon as a separator between the start and end of the range, like [2:5]. 
+
+This range is similar to the range() function we saw previously. It includes the first number, but goes to one less than the last number. For example:
+```console
+>>> fruit = "Mangosteen"
+>>> fruit[1:4]
+'ang'
+```
+
+The slice includes the character at index 1, and excludes the character at index 4. You can also easily reference a substring at the start or end of the string by only specifying one end of the range. For example, only giving the end of the range:
+```console
+>>> fruit[:5]
+'Mango'
+```
+
+This gave us the characters from the start of the string through index 4, excluding index 5. On the other hand this example gives is the characters including index 5, through the end of the string:
+```console
+>>> fruit[5:]
+'steen'
+```
+You might have noticed that if you put both of those results together, you get the original string back!
+```console
+>>> fruit[:5] + fruit[5:]
+'Mangosteen'
+```
+
+##### String Reference Cheat Sheet
+In Python, there are a lot of things you can do with strings. In this cheat sheet, you’ll find the most common string operations and string methods.
+
+###### String operations
+* **len(string)** - Returns the length of the string
+* **for character in string** - Iterates over each character in the string
+* **if substring in string** - Checks whether the substring is part of the string
+* **string[i]** - Accesses the character at index i of the string, starting at zero
+* **string[i:j]** - Accesses the substring starting at index i, ending at index j minus 1. If i is omitted, its value defaults to 0. If j is omitted, the value will default to len(string).
+
+###### String methods
+* **string.lower()** - Returns a copy of the string with all lowercase characters
+* **string.upper()** - Returns a copy of the string with all uppercase characters
+* **string.lstrip()** - Returns a copy of the string with the left-side whitespace removed
+* **string.rstrip()** - Returns a copy of the string with the right-side whitespace removed
+* **string.strip()** - Returns a copy of the string with both the left and right-side whitespace removed
+* **string.count(substring)** - Returns the number of times substring is present in the string
+* **string.isnumeric()** - Returns True if there are only numeric characters in the string. If not, returns False.
+* **string.isalpha()** - Returns True if there are only alphabetic characters in the string. If not, returns False.
+* **string.split()** - Returns a list of substrings that were separated by whitespace (whitespace can be a space, tab, or new line)
+* **string.split(delimiter)** - Returns a list of substrings that were separated by whitespace or a delimiter
+* **string.replace(old, new)** - Returns a new string where all occurrences of old have been replaced by new.
+* **delimiter.join(list of strings)** - Returns a new string with all the strings joined by the delimiter 
+
+###### Formatting Strings Cheat Sheet
+####### format() method
+```python
+# "base string with {} placeholders".format(variables)
+
+example = "format() method"
+
+formatted_string = "this is an example of using the {} on a string".format(example)
+
+print(formatted_string)
+
+"""Outputs:
+this is an example of using the format() method on a string
+"""
+```
+If the placeholders indicate a number, they’re replaced by the variable corresponding to that order (starting at zero)
+```python
+# "{0} {1}".format(first, second)
+
+first = "apple"
+second = "banana"
+third = "carrot"
+
+formatted_string = "{0} {2} {1}".format(first, second, third)
+
+print(formatted_string)
+
+"""Outputs:
+apple carrot banana
+"""
+```
+If the placeholders indicate a field name, they’re replaced by the variable corresponding to that field name. This means that parameters to format need to be passed indicating the field name.
+```python
+# "{var1} {var2}".format(var1=value1, var2=value2)
+"{:exp1} {:exp2}".format(value1, value2)
+```
+If the placeholders include a colon, what comes after the colon is a formatting expression. See below for the expression reference.
+```python
+# {:d} integer value
+'{:d}'.format(10.5) → '10'
+```
+###### Formatting expressions
+![image](https://user-images.githubusercontent.com/18415884/197331516-33f9cf8c-2262-4dbc-a93a-0cf154c9b60e.png)
+
+###### Formatted string literals
+This feature was added in Python 3.6 and isn’t used a lot yet<br/>
+###### Examples:
+```python
+>>> name = "Micah"
+>>> print(f'Hello {name}')
+Hello Micah
+```
+```python
+>>> item = "Purple Cup"
+>>> amount = 5
+>>> price = amount * 3.25
+>>> print(f'Item: {item} - Amount: {amount} - Price: {price:.2f}')
+Item: Purple Cup - Amount: 5 - Price: 16.25
+```
+
+
+#### Lists
+#### Dictionaries
 ### week 5
 ### week 6
