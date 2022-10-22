@@ -546,5 +546,10 @@ print(replace_ending("The weather is nice in May", "May", "April"))
 ```
 #### Lists
 #### Dictionaries
+
 ### week 5
+#### Object Oriented Programming
+#### Classes and methods
+#### Code reuse
+
 ### week 6
