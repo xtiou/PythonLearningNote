@@ -1,4 +1,4 @@
-# This is a repository for Python basics learning Note
+# This is a repository for Basic Python learning Note || Coursera course
 ### week 1
 ### week 2
 
